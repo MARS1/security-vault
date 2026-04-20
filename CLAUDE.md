@@ -29,17 +29,27 @@
 | `_templates/` | Security-Capture, My-Post, Daily-Note templates |
 | `_credentials/` | API keys and secrets — NEVER committed |
 
-## Sorting Rules — CRITICAL
+## Extraction Workflow — CRITICAL
 
-**Never leave items in `00-Inbox/` unprocessed.** When processing a capture:
+**All Instagram links and URLs are processed via `/content-extract`.** Never dump to `00-Inbox/` and leave.
 
-1. Read the content or link
-2. Determine category using the table above
-3. Create a note directly in the target folder using `sort-inbox.py` or manually
-4. Name the file: `{category}--{slug}.md` (e.g., `threats--phishing-anatomy.md`)
-5. If genuinely ambiguous, ask before dropping to Inbox
+**Workflow:**
+1. User drops Instagram/YouTube/article link into Notion Inbox
+2. Run `/content-extract` — skill reads Notion Inbox, extracts content (transcript, OCR, captions), routes to correct folder, archives in Notion
+3. `00-Inbox/` is only a fallback for ambiguous captures — must be cleared before session ends
 
-Run `python3 sort-inbox.py` to auto-route any files already in `00-Inbox/` by frontmatter or prefix.
+**Content-extract routing for this vault:**
+
+| Content type | Folder |
+|---|---|
+| Attack vectors, malware, CVEs, social engineering | `01-Threats/` |
+| Hardening, monitoring, incident response, controls | `02-Defense/` |
+| Auth, IAM, MFA, zero trust, credential hygiene | `03-Identity/` |
+| Network, cloud, endpoint, OS-level security | `04-Infrastructure/` |
+| Security tools, commands, cheat sheets | `05-Tools/` |
+| Mars's own written posts and messages | `06-My-Content/` |
+| Sources to follow: accounts, newsletters, podcasts | `07-Sources/` |
+| Ambiguous or unclear fit | `00-Inbox/` (process before session ends) |
 
 ## File Naming Convention
 

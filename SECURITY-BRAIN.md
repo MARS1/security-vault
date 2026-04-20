@@ -27,12 +27,10 @@ Personal cybersecurity knowledge base — capturing external tips, distilling Ma
 - [ ] Process Notion inbox captures
 - [ ] Check `00-Inbox/` — should be empty before closing
 
-## Sorting
+## Extracting Content
 
-Run this from the vault root to auto-route inbox files:
-```bash
-python3 sort-inbox.py
-```
+Drop links in Notion Inbox → run `/content-extract` in Claude Code.
+Skill handles download, transcription, OCR, routing, and Notion archiving automatically.
 
 ## Notion Inbox
 
