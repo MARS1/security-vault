@@ -14,4 +14,4 @@
 
 | Vault | Path | VCS | Branch |
 |-------|------|-----|--------|
-| Security | `/Volumes/VM/OBSIDIAN/Security/` | git | main |
+| Security | `/Volumes/VM/OBSIDIAN/Security/` | git | main | https://github.com/MARS1/security-vault.git |
