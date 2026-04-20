@@ -35,8 +35,15 @@
 
 **Workflow:**
 1. User drops Instagram/YouTube/article link into Notion Inbox
-2. Run `/content-extract` — skill reads Notion Inbox, extracts content (transcript, OCR, captions), routes to correct folder, archives in Notion
-3. `00-Inbox/` is only a fallback for ambiguous captures — must be cleared before session ends
+2. Run `/content-extract` — skill reads Notion Inbox, extracts content (transcript, OCR, captions), routes to correct folder
+3. After saving: **remove link from Inbox → add link to Outbox** — this prevents re-processing the same content
+4. Create a dated batch record in Archive for reference
+5. `00-Inbox/` vault folder is only a fallback for ambiguous captures — must be cleared before session ends
+
+**Notion pages:**
+- **Inbox:** https://www.notion.so/3483d8e1370080b39896fcb383aa1bdd — drop links here
+- **Outbox:** https://www.notion.so/3483d8e13700807c82a0c981ef1706c4 — processed links land here
+- **Archive:** https://www.notion.so/3483d8e1370081d1aad9d2f5639267eb — dated batch records
 
 **Content-extract routing for this vault:**
 
