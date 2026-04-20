@@ -1,0 +1,13 @@
+{
+  "legacyEditor": false,
+  "livePreview": true,
+  "defaultViewMode": "source",
+  "strictLineBreaks": false,
+  "showLineNumber": false,
+  "spellcheck": true,
+  "spellcheckLanguages": ["en"],
+  "readableLineLength": true,
+  "tabSize": 2,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "_attachments"
+}
