@@ -11,6 +11,14 @@
 
 **Workflow:** Drop Instagram links into Notion Inbox → run `/content-extract` → skill extracts content, routes to vault folder, moves link from Inbox to Outbox, creates dated batch record in Archive.
 
+## Autonomy & Direct Action
+
+- When you have direct tool access (SSH, git, Airtable MCP, Notion MCP, Bash), USE IT — do not ask the user to run manual terminal commands, paste URLs, or perform UI actions you could do yourself
+- Never commit code changes without explicit user approval — stage, show diff, summarize, then wait
+- For OAuth/auth links, open in Brave (not Chrome) — never ask user to open the browser manually
+- When stuck after 2–3 search attempts, STOP and ask rather than continuing to grep blindly
+- When a session type has an existing skill (`/content-extract`, `/session-close`, etc.), USE THE SKILL — do not write custom scripts
+
 ## Repos
 
 | Vault | Path | VCS | Branch |
